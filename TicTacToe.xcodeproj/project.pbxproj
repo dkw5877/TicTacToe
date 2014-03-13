@@ -12,16 +12,17 @@
 		CE9CEBD718D23276005BC3E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CEBD618D23276005BC3E0 /* UIKit.framework */; };
 		CE9CEBDD18D23276005BC3E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9CEBDB18D23276005BC3E0 /* InfoPlist.strings */; };
 		CE9CEBDF18D23276005BC3E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CEBDE18D23276005BC3E0 /* main.m */; };
-		CE9CEBE318D23276005BC3E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CEBE218D23276005BC3E0 /* AppDelegate.m */; };
 		CE9CEBE618D23276005BC3E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9CEBE418D23276005BC3E0 /* Main.storyboard */; };
-		CE9CEBE918D23276005BC3E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CEBE818D23276005BC3E0 /* ViewController.m */; };
-		CE9CEBEB18D23276005BC3E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9CEBEA18D23276005BC3E0 /* Images.xcassets */; };
 		CE9CEBF218D23276005BC3E0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CEBF118D23276005BC3E0 /* XCTest.framework */; };
 		CE9CEBF318D23276005BC3E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CEBD218D23276005BC3E0 /* Foundation.framework */; };
 		CE9CEBF418D23276005BC3E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CEBD618D23276005BC3E0 /* UIKit.framework */; };
 		CE9CEBFC18D23276005BC3E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9CEBFA18D23276005BC3E0 /* InfoPlist.strings */; };
 		CE9CEBFE18D23276005BC3E0 /* TicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CEBFD18D23276005BC3E0 /* TicTacToeTests.m */; };
 		CE9CEC0A18D23779005BC3E0 /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CEC0918D23779005BC3E0 /* CheckMate.framework */; };
+		CE9CEC0D18D262CC005BC3E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CEC0C18D262CC005BC3E0 /* AppDelegate.m */; };
+		CE9CEC1018D262EE005BC3E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9CEC0F18D262EE005BC3E0 /* ViewController.m */; };
+		CE9CEC1518D26305005BC3E0 /* TicTacToe-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE9CEC1218D26305005BC3E0 /* TicTacToe-Info.plist */; };
+		CE9CEC1718D26321005BC3E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9CEC1618D26321005BC3E0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,22 +40,22 @@
 		CE9CEBD218D23276005BC3E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE9CEBD418D23276005BC3E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CE9CEBD618D23276005BC3E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		CE9CEBDA18D23276005BC3E0 /* TicTacToe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TicTacToe-Info.plist"; sourceTree = "<group>"; };
 		CE9CEBDC18D23276005BC3E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE9CEBDE18D23276005BC3E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CE9CEBE018D23276005BC3E0 /* TicTacToe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TicTacToe-Prefix.pch"; sourceTree = "<group>"; };
-		CE9CEBE118D23276005BC3E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CE9CEBE218D23276005BC3E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CE9CEBE518D23276005BC3E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE9CEBE718D23276005BC3E0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CE9CEBE818D23276005BC3E0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CE9CEBEA18D23276005BC3E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE9CEBF018D23276005BC3E0 /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9CEBF118D23276005BC3E0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CE9CEBF918D23276005BC3E0 /* TicTacToeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TicTacToeTests-Info.plist"; sourceTree = "<group>"; };
 		CE9CEBFB18D23276005BC3E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE9CEBFD18D23276005BC3E0 /* TicTacToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeTests.m; sourceTree = "<group>"; };
 		CE9CEC0918D23779005BC3E0 /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CheckMate.framework; path = ../CheckMate.framework; sourceTree = "<group>"; };
+		CE9CEC0B18D262CC005BC3E0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE9CEC0C18D262CC005BC3E0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE9CEC0E18D262EE005BC3E0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CE9CEC0F18D262EE005BC3E0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE9CEC1218D26305005BC3E0 /* TicTacToe-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TicTacToe-Info.plist"; sourceTree = "<group>"; };
+		CE9CEC1318D26305005BC3E0 /* TicTacToe-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TicTacToe-Prefix.pch"; sourceTree = "<group>"; };
+		CE9CEC1618D26321005BC3E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +117,12 @@
 		CE9CEBD818D23276005BC3E0 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				CE9CEBE118D23276005BC3E0 /* AppDelegate.h */,
-				CE9CEBE218D23276005BC3E0 /* AppDelegate.m */,
+				CE9CEC0B18D262CC005BC3E0 /* AppDelegate.h */,
+				CE9CEC0C18D262CC005BC3E0 /* AppDelegate.m */,
 				CE9CEBE418D23276005BC3E0 /* Main.storyboard */,
-				CE9CEBE718D23276005BC3E0 /* ViewController.h */,
-				CE9CEBE818D23276005BC3E0 /* ViewController.m */,
-				CE9CEBEA18D23276005BC3E0 /* Images.xcassets */,
+				CE9CEC0E18D262EE005BC3E0 /* ViewController.h */,
+				CE9CEC0F18D262EE005BC3E0 /* ViewController.m */,
+				CE9CEC1618D26321005BC3E0 /* Images.xcassets */,
 				CE9CEBD918D23276005BC3E0 /* Supporting Files */,
 			);
 			path = TicTacToe;
@@ -130,10 +131,10 @@
 		CE9CEBD918D23276005BC3E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE9CEBDA18D23276005BC3E0 /* TicTacToe-Info.plist */,
+				CE9CEC1218D26305005BC3E0 /* TicTacToe-Info.plist */,
+				CE9CEC1318D26305005BC3E0 /* TicTacToe-Prefix.pch */,
 				CE9CEBDB18D23276005BC3E0 /* InfoPlist.strings */,
 				CE9CEBDE18D23276005BC3E0 /* main.m */,
-				CE9CEBE018D23276005BC3E0 /* TicTacToe-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -232,9 +233,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9CEBEB18D23276005BC3E0 /* Images.xcassets in Resources */,
+				CE9CEC1718D26321005BC3E0 /* Images.xcassets in Resources */,
 				CE9CEBDD18D23276005BC3E0 /* InfoPlist.strings in Resources */,
 				CE9CEBE618D23276005BC3E0 /* Main.storyboard in Resources */,
+				CE9CEC1518D26305005BC3E0 /* TicTacToe-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,8 +255,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9CEBE918D23276005BC3E0 /* ViewController.m in Sources */,
-				CE9CEBE318D23276005BC3E0 /* AppDelegate.m in Sources */,
+				CE9CEC0D18D262CC005BC3E0 /* AppDelegate.m in Sources */,
+				CE9CEC1018D262EE005BC3E0 /* ViewController.m in Sources */,
 				CE9CEBDF18D23276005BC3E0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +474,7 @@
 				CE9CEC0318D23276005BC3E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE9CEC0418D23276005BC3E0 /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +483,7 @@
 				CE9CEC0618D23276005BC3E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
