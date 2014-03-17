@@ -7,13 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import <CheckMate/CheckMate.h>
+//#import <CheckMate/CheckMate.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [CheckMate initializeFramework:@[@"00f65cae32af2bfe7aea371f441799c0",@"7df93b86cbd83de7f308259fe6a5f747"]];
+//    [CheckMate initializeFramework:@[@"00f65cae32af2bfe7aea371f441799c0",@"7df93b86cbd83de7f308259fe6a5f747"]];
     return YES;
 }
 							
