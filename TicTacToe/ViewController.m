@@ -56,8 +56,6 @@
     
     //raise an alert to show game options
     [self raiseNewGameAlert];
-    
-
 }
 
 
@@ -123,8 +121,10 @@
     
     if (self.singlePlayerMode && [self.currentPlayer isEqualToString:PLAYER2])
     {
-        [self startComputersTurn];
-        
+        [self raiseComputerTurnAlert];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self startComputersTurn];
+        });
     }
 
 }
@@ -160,11 +160,12 @@
         }
     }
 
-    
     if (self.singlePlayerMode && [self.currentPlayer isEqualToString:PLAYER2])
     {
-        [self startComputersTurn];
-        
+        [self raiseComputerTurnAlert];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self startComputersTurn];
+        });
     }
 }
 
@@ -219,7 +220,6 @@
     else
     {
         label.textColor =  [UIColor redColor];
-        
     }
 }
 
@@ -241,8 +241,6 @@
         {
             self.computersTurn = !self.computersTurn;
         }
-        
-        NSLog(@"computer players turn?: %d", self.computersTurn);
 
     }
     else
@@ -251,8 +249,6 @@
         self.playerSymbolLabel.text = PLAYER1;
         self.playerSymbolLabel.textColor = [UIColor blueColor];
         self.whichPlayerLabel.text = [NSString stringWithFormat:@"Current Player: %@",self.currentPlayer];
-        
-        NSLog(@"computer players turn?: %d", self.computersTurn);
     }
     
 }
@@ -268,7 +264,7 @@
     {
         [self.gameBoard replaceObjectAtIndex:tag-1 withObject:player];
         self.numberOfMoves++;
-        NSLog(@"game board %@:",self.gameBoard);
+        //NSLog(@"game board %@:",self.gameBoard);
     }
 
 }
@@ -357,22 +353,18 @@
  */
 -(void)startComputersTurn
 {
-    NSLog(@"computer choosing a move");
-
-    NSLog(@"game board before choice: %@",self.gameBoard);
+    
     NSInteger move = [self.brain makeMove];
     
     //TODO: we need to review all checks, we should not try
-    //to choose an already selected location. If we do, lets
-    //just try again for now
+    //to choose an already selected location. If we do, lets just try again for now
     while (![self.gameBoard[move] isEqualToString:@"-"])
     {
         move = [self.brain makeMove];
     }
     move++; //computer is choosing an array index, not a label value
-    
-    NSLog(@"computer chose postion %ld", (long)move);
-    
+
+    sleep(2);
     [self updateGameBoard:move withPlayerMove:self.currentPlayer];
     
     //TODO: we really need to search the labels by tag value to find the
@@ -455,136 +447,11 @@
     [alertView show];
 }
 
-#pragma mark - old whoWon method using if else
+- (void)raiseComputerTurnAlert
+{
+    UIAlertView* computerTurnAlert = [[UIAlertView alloc]initWithTitle:@"Computer's Turn" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [computerTurnAlert show];
+    [computerTurnAlert dismissWithClickedButtonIndex:0 animated:YES];
+}
 
-/**
- * Determine if there was a winner of the game
- * @param none
- * @return NSString
- */
-//- (NSString *)whoWon
-//{
-//    //first check all the horizontal rows for a winner, then check the vertical rows
-//    //then check the two diagonal rows. We first check if X is a winner, then O
-//    if ([self.myLabelOne.text isEqualToString:@"X"]&&
-//        [self.myLabelTwo.text isEqualToString:@"X"]&&
-//        [self.myLabelThree.text isEqualToString:@"X"])
-//    {
-//        return @"X";
-//        
-//    }
-//    else if([self.myLabelFour.text isEqualToString:@"X"]&&
-//            [self.myLabelFive.text isEqualToString:@"X"]&&
-//            [self.myLabelSix.text isEqualToString:@"X"])
-//    {
-//        return @"X";
-//    }
-//    else if ([self.myLabelSeven.text isEqualToString:@"X"]&&
-//             [self.myLabelEight.text isEqualToString:@"X"]&&
-//             [self.myLabelNine.text isEqualToString:@"X"])
-//    {
-//        return @"X";
-//    }
-//    //first columnn for X
-//    else if ([self.myLabelOne.text isEqualToString:@"X"]&&
-//             [self.myLabelFour.text isEqualToString:@"X"]&&
-//             [self.myLabelSeven.text isEqualToString:@"X"])
-//    {
-//        return @"X";
-//    }
-//    else if ([self.myLabelTwo.text isEqualToString:@"X"]&&
-//             [self.myLabelFive.text isEqualToString:@"X"]&&
-//             [self.myLabelEight.text isEqualToString:@"X"])
-//    {
-//        return @"X";
-//    }
-//    else if ([self.myLabelThree.text isEqualToString:@"X"]&&
-//             [self.myLabelSix.text isEqualToString:@"X"]&&
-//             [self.myLabelNine.text isEqualToString:@"X"])
-//    {
-//        return @"X";
-//    }
-//    else if ([self.myLabelOne.text isEqualToString:@"X"]&&
-//             [self.myLabelFive.text isEqualToString:@"X"]&&
-//             [self.myLabelNine.text isEqualToString:@"X"])
-//    {
-//        return @"X";
-//    }
-//    else if ([self.myLabelThree.text isEqualToString:@"X"]&&
-//             [self.myLabelFive.text isEqualToString:@"X"]&&
-//             [self.myLabelSeven.text isEqualToString:@"X"])
-//    {
-//        return @"X";
-//    }
-//    else if ([self.myLabelOne.text isEqualToString:@"O"]&&
-//             [self.myLabelTwo.text isEqualToString:@"O"]&&
-//             [self.myLabelThree.text isEqualToString:@"O"])
-//    {
-//        return @"O";
-//    }
-//    else if([self.myLabelFour.text isEqualToString:@"O"]&&
-//            [self.myLabelFive.text isEqualToString:@"O"]&&
-//            [self.myLabelSix.text isEqualToString:@"O"])
-//    {
-//        return @"O";
-//    }
-//    else if ([self.myLabelSeven.text isEqualToString:@"O"]&&
-//             [self.myLabelEight.text isEqualToString:@"O"]&&
-//             [self.myLabelNine.text isEqualToString:@"O"])
-//    {
-//        return @"O";
-//    }
-//    else if ([self.myLabelOne.text isEqualToString:@"O"]&&
-//             [self.myLabelFour.text isEqualToString:@"O"]&&
-//             [self.myLabelSeven.text isEqualToString:@"O"])
-//    {
-//        return @"O";
-//    }
-//    else if ([self.myLabelTwo.text isEqualToString:@"O"]&&
-//             [self.myLabelFive.text isEqualToString:@"O"]&&
-//             [self.myLabelEight.text isEqualToString:@"O"])
-//    {
-//        return @"O";
-//    }
-//    else if ([self.myLabelThree.text isEqualToString:@"O"]&&
-//             [self.myLabelSix.text isEqualToString:@"O"]&&
-//             [self.myLabelNine.text isEqualToString:@"O"])
-//    {
-//        return @"O";
-//    }
-//    else if ([self.myLabelOne.text isEqualToString:@"O"]&&
-//             [self.myLabelFive.text isEqualToString:@"O"]&&
-//             [self.myLabelNine.text isEqualToString:@"O"])
-//    {
-//        
-//        return @"O";
-//    }
-//    else if ([self.myLabelThree.text isEqualToString:@"O"]&&
-//             [self.myLabelFive.text isEqualToString:@"O"]&&
-//             [self.myLabelSeven.text isEqualToString:@"O"])
-//    {
-//        return @"O";
-//    }
-//    else if ([self.myLabelOne.text isEqualToString:@"O"]&&
-//             [self.myLabelFive.text isEqualToString:@"O"]&&
-//             [self.myLabelNine.text isEqualToString:@"O"])
-//    {
-//        return @"O";
-//    }
-//    else if ([self.myLabelThree.text isEqualToString:@"O"]&&
-//             [self.myLabelFive.text isEqualToString:@"O"]&&
-//             [self.myLabelSeven.text isEqualToString:@"O"])
-//    {
-//        return @"O";
-//    }
-//    else
-//    {
-//        return nil;
-//    }
-//    
-//}
-
-
-
-    
 @end

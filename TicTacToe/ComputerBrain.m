@@ -100,12 +100,7 @@
 
 -(NSInteger)makeStrategicMoveUsingLogic
 {
-    NSLog(@"make strategic move");
-    
-    NSLog(@"current player is %@", self.currentPlayer);
-
     NSInteger move =  [self canPlayertWin:self.currentPlayer];
-    NSLog(@"canPlayerWin player move = %ld",(long)move);
     
     if (move != -1) {
         return move;
@@ -115,7 +110,6 @@
     move = [self canPlayertWin:self.opposingPlayer];
     if (move != -1)
     {
-        NSLog(@"canPlayerWin opponet move = %ld",(long)move);
         return move;
     }
     
@@ -124,7 +118,6 @@
     
     if(move != -1)
     {
-        NSLog(@"choose center move = %ld",(long)move);
         return move;
     }
     
@@ -132,14 +125,11 @@
     
     if(move != -1)
     {
-        NSLog(@"chooseRandomCorner move = %ld",(long)move);
         return move;
     }
 
     move = [self makeSimpleMoveUsingRandomNumber:self.gameBoard];
-    NSLog(@"random choice move = %ld",(long)move);
     return move;
-
 
 }
 

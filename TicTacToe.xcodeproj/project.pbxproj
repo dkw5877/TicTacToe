@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE42187818D552980031D22F /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE42187718D552980031D22F /* CheckMate.framework */; };
 		CE7AE0AD18D4DFB600AAEDF7 /* WebviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7AE0AC18D4DFB600AAEDF7 /* WebviewViewController.m */; };
 		CE9CEBD318D23276005BC3E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CEBD218D23276005BC3E0 /* Foundation.framework */; };
 		CE9CEBD518D23276005BC3E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CEBD418D23276005BC3E0 /* CoreGraphics.framework */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE42187718D552980031D22F /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CheckMate.framework; path = ../CheckMate.framework; sourceTree = "<group>"; };
 		CE7AE0AB18D4DFB600AAEDF7 /* WebviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewViewController.h; sourceTree = "<group>"; };
 		CE7AE0AC18D4DFB600AAEDF7 /* WebviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebviewViewController.m; sourceTree = "<group>"; };
 		CE9CEBCF18D23276005BC3E0 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE42187818D552980031D22F /* CheckMate.framework in Frameworks */,
 				CE9CEBD518D23276005BC3E0 /* CoreGraphics.framework in Frameworks */,
 				CE9CEBD718D23276005BC3E0 /* UIKit.framework in Frameworks */,
 				CE9CEBD318D23276005BC3E0 /* Foundation.framework in Frameworks */,
@@ -110,7 +107,6 @@
 		CE9CEBD118D23276005BC3E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE42187718D552980031D22F /* CheckMate.framework */,
 				CE9CEBD218D23276005BC3E0 /* Foundation.framework */,
 				CE9CEBD418D23276005BC3E0 /* CoreGraphics.framework */,
 				CE9CEBD618D23276005BC3E0 /* UIKit.framework */,
